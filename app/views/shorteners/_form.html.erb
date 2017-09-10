@@ -1,0 +1,16 @@
+<%= form_with(url: :create) do |form| %>
+  <% if flash[:notice] %>
+    <div id="field">
+      <p><%= flash[:notice] %></p>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<div id='short_url'></div>
