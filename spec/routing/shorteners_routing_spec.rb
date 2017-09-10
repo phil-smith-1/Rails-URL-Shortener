@@ -8,7 +8,7 @@ RSpec.describe ShortenersController, type: :routing do
     end
 
     it "routes to #redirect" do
-      expect(:get => "/abc123").to route_to("shorteners#redirect", :path => "abc123")
+      expect(:get => "/abc123").to route_to("shorteners#redirect", :url => "abc123")
     end
 
     it "routes to #create" do
