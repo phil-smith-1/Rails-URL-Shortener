@@ -33,4 +33,19 @@ RSpec.describe Shortener, type: :model do
       end
     end
   end
+
+  describe '#format_url' do
+    it 'should return and empty string if a nil value is passed' do
+      expect(Shortener.format_url(nil)).to eq('')
+    end
+
+    it 'should return the url parameter if it starts with http:// or https://' do
+      expect(Shortener.format_url('http://www.test.com')).to eq('http://www.test.com')
+      expect(Shortener.format_url('https://www.test.com')).to eq('https://www.test.com')
+    end
+
+    it 'should prepend http:// when the url does not start with http:// or https://' do
+      expect(Shortener.format_url('www.test.com')).to eq('http://www.test.com')
+    end
+  end
 end

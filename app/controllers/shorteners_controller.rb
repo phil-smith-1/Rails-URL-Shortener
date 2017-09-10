@@ -8,7 +8,7 @@ class ShortenersController < ApplicationController
   def create
     path_id = Shortener.new_path_id
     path = request.xhr? ? params['url'] : JSON.parse(params.keys.first)['url']
-    Shortener.paths[path_id] = path
+    Shortener.paths[path_id] = Shortener.format_url(path)
     if request.xhr?
       redirect_to new_path, flash: { notice: "New short_url '/#{path_id}' set to '#{path}'" }
     else

@@ -21,7 +21,7 @@ RSpec.describe ShortenersController, type: :controller do
       end
 
       it "returns a success status code" do
-        post :create, params: {shortener: valid_attributes}, xhr: true
+        post :create, params: valid_attributes, xhr: true
         expect(response).to be_success
       end
     end
