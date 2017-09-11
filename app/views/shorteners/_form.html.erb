@@ -1,7 +1,7 @@
 <%= form_with(url: :create) do |form| %>
   <% if flash[:notice] %>
     <div id="field">
-      <p><%= flash[:notice] %></p>
+      <p><%= flash[:notice].html_safe %></p>
   <% end %>
 
   <div class="field">
