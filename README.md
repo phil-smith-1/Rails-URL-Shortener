@@ -7,18 +7,18 @@ The application is Dockerized for installation convenience. To use the Docker co
 
 Once Docker is installed, navigate to the project's root directory and run the following commands in sequence:
 
-  docker build .
+    docker build .
 
-  docker-compose build
+    docker-compose build
 
-  docker-compose up
+    docker-compose up
 
 This will allow you to use the system on your localhost on port 4000.
 
 ## Testing
 The application has a number of unit tests, written in [RSpec](http://rspec.info). In order to run the tests, from the root directory, use:
 
-  rspec 
+    rspec
 
 ## Original Spec
 
