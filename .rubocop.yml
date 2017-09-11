@@ -1,0 +1,16 @@
+AllCops:
+  TargetRubyVersion: 2.3.4
+  Exclude:
+    - 'bin/*'
+    - 'config/*'
+    - 'config/*/*'
+    - 'test/*'
+    - 'spec/*'
+Metrics/LineLength:
+  Max: 150
+Metrics/BlockLength:
+  Enabled: false
+Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false

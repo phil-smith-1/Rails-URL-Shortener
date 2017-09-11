@@ -9,12 +9,16 @@ Once Docker is installed, navigate to the project's root directory and run the f
 
     docker-compose up
 
-This will allow you to access the system on your localhost using port 4000.
+This will allow you to access the system on your localhost using port 4000. E.G. [http://localhost:4000]
 
 ## Testing
 The application has a number of unit tests, written in [RSpec](http://rspec.info). In order to run the tests, from the root directory, use:
 
     rspec
+
+The project uses [Rubocop](http://batsov.com/rubocop) for code linting. To run Rubocop, from the root directory, use:
+
+    rubocop
 
 ## Original Spec
 

@@ -9,14 +9,14 @@ class Shortener
 
   def self.new_path_id
     loop do
-      path_id = [*('a'..'z'),*('0'..'9')].shuffle[0,8].join
+      path_id = [*('a'..'z'), *('0'..'9')].sample(8).join
       return path_id if paths[path_id].nil?
     end
   end
 
   def self.format_url(url)
     return '' if url.nil?
-    return url.prepend('http://') unless /https?:\/\//.match(url)
+    return url.prepend('http://') unless %r{https?://} =~ url
     url
   end
 end
