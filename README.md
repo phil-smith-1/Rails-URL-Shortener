@@ -1,4 +1,26 @@
-# Url Shortener Code Test
+# Url Shortener
+
+A Ruby on Rails application that sets up short aliases for URLs. Uses Rails 5.1.2 and Ruby 2.3.4.
+
+## Docker
+The application is Dockerized for installation convenience. To use the Docker container, first you must install Docker. Please see the [Docker install page](https://docs.docker.com/engine/installation/) for instructions.
+
+Once Docker is installed, navigate to the project's root directory and run the following commands in sequence:
+
+  docker build .
+
+  docker-compose build
+
+  docker-compose up
+
+This will allow you to use the system on your localhost on port 4000.
+
+## Testing
+The application has a number of unit tests, written in [RSpec](http://rspec.info). In order to run the tests, from the root directory, use:
+
+  rspec 
+
+## Original Spec
 
 We'd like you to create a URL shortening service.
 - It should have a route where you can send a POST request with a URL in the
